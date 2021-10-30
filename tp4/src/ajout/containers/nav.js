@@ -5,12 +5,11 @@ import '../index.css';
 export default class Nav extends React.Component {
 
     render() {
-        const{user,changeUser } = this.props;
+        const{users,changeUser } = this.props;
         
         return (
             <div class='nav'>
-                {user.map((user) => <Button text={user.name}
-                onClick={() => changeUser(user.name)} />)}
+                {users.map((user) => <Button text={user.name} onClick={() => changeUser(user.name)} />)}
             </div>)
     }
 }

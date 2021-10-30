@@ -1,8 +1,7 @@
 import React from 'react';
-import '../index.css';
+import './index.css';
 import User from './containers/user';
 import Nav from './containers/nav';
-import Martine from './img/Martine.PNG';
 
 export default class App extends React.Component {
 
