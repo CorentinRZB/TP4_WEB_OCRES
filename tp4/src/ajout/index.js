@@ -2,7 +2,7 @@ import React from 'react';
 import '../index.css';
 import User from './containers/user';
 import Nav from './containers/nav';
-import Martine from './img/Martine.png';
+import Martine from './img/Martine.PNG';
 
 export default class App extends React.Component {
 
@@ -40,5 +40,27 @@ export default class App extends React.Component {
         }
     }
 
+    changeUser(selectedUser) {
+        this.setState({selectedUser});
+
+    }
+
+    handleLike(username) {
+        const{users} = this.state;
+        const userIndex = users.findIndex((user) => user.name === username);
+        let newUsers = users;
+        newUsers[userIndex].like += 1
+        this.setState({users:newUsers});
+    }
+
+    render() {
+        const {users,selectedUser} = this.state;
+
+        return (
+            <div class='mainContent'>
+                <Nav users={users} changeUser={this.changeUser.bind(this)} />
+                <User user={users.find((user) => user.name === selectedUser)} handleLike={this.handleLike.bind(this)} />
+            </div>)
+    }
 
 }
