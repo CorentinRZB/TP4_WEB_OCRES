@@ -2,6 +2,9 @@ import React from 'react';
 import './index.css';
 import User from './containers/user';
 import Nav from './containers/nav';
+import Martine from './img/Martine.PNG';
+import Jeanne from './img/Jeanne.jpg';
+import Claude from './img/Claude.jpg';
 
 export default class App extends React.Component {
 
@@ -13,22 +16,25 @@ export default class App extends React.Component {
             users: [
                 {
                     name:'Jeanne',
-                    surname:'Rock',
+                    surname:'Darques',
                     birthdate: '16/03/1999',
+                    picture: Jeanne,
                     lastPublication: 'PubliJeanne',
                     like:0
                 },
                 {
                     name:'Martine',
-                    surname:'Jazz',
+                    surname:'VaEnVacances',
                     birthdate: '28/07/2000',
+                    picture: Martine,
                     lastPublication: 'PubliMartine',
                     like:0
                 },
                 {
                     name:'Claude',
-                    surname:'Rap',
+                    surname:'François',
                     birthdate: '01/01/2001',
+                    picture : Claude,
                     lastPublication: 'PubliClaude',
                     like:0
                 },
